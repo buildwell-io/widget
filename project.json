@@ -1,5 +1,5 @@
 {
-  "name": "buildwell-widget",
+  "name": "widget",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "./src",
   "projectType": "application",
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/buildwell-widget"
+        "outputPath": "dist/widget"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "buildwell-widget:build"
+        "buildTarget": "widget:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "buildwell-widget:build:development",
+          "buildTarget": "widget:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "buildwell-widget:build:production",
+          "buildTarget": "widget:build:production",
           "hmr": false
         }
       }
@@ -41,14 +41,14 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "buildwell-widget:build"
+        "buildTarget": "widget:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "buildwell-widget:build:development"
+          "buildTarget": "widget:build:development"
         },
         "production": {
-          "buildTarget": "buildwell-widget:build:production"
+          "buildTarget": "widget:build:production"
         }
       }
     },
@@ -56,7 +56,7 @@
       "executor": "@nx/vite:test",
       "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "reportsDirectory": "coverage/buildwell-widget"
+        "reportsDirectory": "coverage/widget"
       }
     },
     "lint": {

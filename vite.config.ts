@@ -25,7 +25,7 @@ export default defineConfig({
   // },
 
   build: {
-    outDir: './dist/buildwell-widget',
+    outDir: './dist/widget',
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
@@ -42,7 +42,7 @@ export default defineConfig({
 
     reporters: ['default'],
     coverage: {
-      reportsDirectory: './coverage/buildwell-widget',
+      reportsDirectory: './coverage/widget',
       provider: 'v8',
     },
   },

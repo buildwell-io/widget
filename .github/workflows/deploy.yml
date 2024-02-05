@@ -25,5 +25,5 @@ jobs:
           username: ${{ secrets.GA_USER }}
           key: ${{ secrets.GA_USER_KEY }}
           target: ${{ secrets.DEPLOY_DIR }}
-          source: dist/buildwell-widget/*
+          source: dist/widget/*
           strip_components: 2
