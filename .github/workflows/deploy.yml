@@ -24,6 +24,6 @@ jobs:
           host: ${{ secrets.WIDGET_HOST }}
           username: ${{ secrets.GA_USER }}
           key: ${{ secrets.GA_USER_KEY }}
-          target: ${{ secrets.DEPLOY_DIR }}
+          target: ${{ secrets.DEPLOY_DIR_V1 }}
           source: dist/widget/*
           strip_components: 2
