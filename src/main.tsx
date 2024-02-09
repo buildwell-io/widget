@@ -1,13 +1,10 @@
-import { StrictMode } from 'react';
-import * as ReactDOM from 'react-dom/client';
+/*
+* Note: Browsers can block access to window.top due to same origin policy. IE bugs also take place.
+* @see https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
+* */
+if (!__DEV__&&!(()=>{try{return window.self!==window.top;}catch(e){return true;}})()){
+    throw new Error('The buildwell.io widget must be placed inside an <iframe> element!');
+}
 
-import App from './app/app';
-
-const root = ReactDOM.createRoot(
-    document.getElementById('root') as HTMLElement,
-);
-root.render(
-    <StrictMode>
-        <App/>
-    </StrictMode>,
-);
+/* The app is in a <iframe>, loading */
+import('./app/app');
