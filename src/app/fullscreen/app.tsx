@@ -1,4 +1,4 @@
-import NxWelcome from './nx-welcome';
+import NxWelcome from '../common/nx-welcome';
 import * as ReactDOM from 'react-dom/client';
 import { StrictMode } from 'react';
 
