@@ -1,7 +1,13 @@
-function __bootstrap(): Promise<void> {
-    return new Promise((resolve, reject) => {
+interface BootstrapOptions {
+    variant: 'inline' | 'fullscreen';
+}
+
+function __bootstrap(): Promise<BootstrapOptions> {
+    return new Promise<BootstrapOptions>((resolve, reject) => {
         if (import.meta.env.DEV) {
-            return resolve();
+            return resolve({
+                variant: import.meta.env.VITE_CURRENT_APP_TYPE,
+            });
         }
 
         /*
@@ -15,14 +21,15 @@ function __bootstrap(): Promise<void> {
         const url = new URL(window.location.href);
         const urlSearchParams = new URLSearchParams(url.search);
         const key = urlSearchParams.get('key') ?? '';
+        const variant = (urlSearchParams.get('variant') ?? 'inline') as BootstrapOptions['variant'];
         const referrer = document.referrer;
 
         const requestParams = new URLSearchParams({ key, referrer });
         fetch(import.meta.env.VITE_API_URL + '/v1/widget-app/verify?' + requestParams)
-            .then((response) => response.ok ? resolve() : reject('The widget key or referrer is invalid!'))
+            .then((response) => response.ok ? resolve({ variant }) : reject('The widget key or referrer is invalid!'))
             .catch((e) => reject(e));
     });
 }
 
 
-__bootstrap().then(() => import('./app/app')).catch((e) => {throw new Error(e);});
+__bootstrap().then(({ variant }) => import(`./app/${variant}/app.tsx`)).catch((e) => {throw new Error(e);});

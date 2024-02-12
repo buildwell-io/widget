@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom/client';
 import { StrictMode } from 'react';
 
 /* Root */
-function App() {
+export function App() {
     return (
         <div>
             <NxWelcome title="widget"/>
