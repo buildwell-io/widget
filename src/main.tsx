@@ -6,5 +6,11 @@ if (import.meta.env.PROD&&!(()=>{try{return window.self!==window.top;}catch(e){r
     throw new Error('The buildwell.io widget must be placed inside an <iframe> element!');
 }
 
+(() => {
+    fetch(import.meta.env.VITE_API_URL + '/v1/widget-app').then((res) => res.json()).then((res) => {
+        console.log('Response:', res);
+    });
+})();
+
 /* The app is in a <iframe>, loading */
 import('./app/app');
