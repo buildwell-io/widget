@@ -13,16 +13,10 @@
       },
       "configurations": {
         "development": {
-          "mode": "development",
-          "define": {
-            "__DEV__": true
-          }
+          "mode": "development"
         },
         "production": {
-          "mode": "production",
-          "define": {
-            "__DEV__": false
-          }
+          "mode": "production"
         }
       }
     },
