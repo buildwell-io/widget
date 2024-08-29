@@ -4,7 +4,7 @@ interface BootstrapOptions {
 
 function __bootstrap(): Promise<BootstrapOptions> {
     return new Promise<BootstrapOptions>((resolve, reject) => {
-        if (import.meta.env.DEV) {
+        if (import.meta.env.MODE === 'development') {
             return resolve({
                 variant: import.meta.env.VITE_CURRENT_APP_TYPE,
             });
