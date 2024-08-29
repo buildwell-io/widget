@@ -5,9 +5,10 @@ interface BootstrapOptions {
 function __bootstrap(): Promise<BootstrapOptions> {
     return new Promise<BootstrapOptions>((resolve, reject) => {
         if (import.meta.env.MODE === 'development') {
-            return resolve({
-                variant: import.meta.env.VITE_CURRENT_APP_TYPE,
-            });
+            const url = new URL(window.location.href);
+            const urlSearchParams = new URLSearchParams(url.search);
+            const variant = (urlSearchParams.get('variant') ?? 'inline') as BootstrapOptions['variant'];
+            return resolve({ variant });
         }
 
         /*
