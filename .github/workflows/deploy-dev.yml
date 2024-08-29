@@ -16,7 +16,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: npm run build -- -c development
 
       - name: Deploy
         uses: appleboy/scp-action@master
