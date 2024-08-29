@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
-    "build": "nx build -- --base=/v1",
+    "build:prod": "nx run widget:build:production -- --base=/v1",
+    "build:dev": "nx run widget:build:development -- --base=/v1",
     "test": "nx test"
   },
   "private": true,
