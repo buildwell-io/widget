@@ -11,8 +11,11 @@
   "private": true,
   "dependencies": {
     "@swc/helpers": "~0.5.2",
+    "framer-motion": "^11.3.31",
+    "goober": "^2.0.35",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-use-wizard": "^2.3.0"
   },
   "devDependencies": {
     "@nx/eslint": "17.2.8",

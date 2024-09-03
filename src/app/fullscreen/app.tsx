@@ -1,4 +1,4 @@
-import NxWelcome from '../common/nx-welcome';
+import WdgtComponent from '../common/wdgt-component';
 import * as ReactDOM from 'react-dom/client';
 import { StrictMode } from 'react';
 
@@ -6,7 +6,7 @@ import { StrictMode } from 'react';
 export function App() {
     return (
         <div>
-            <NxWelcome title="widget"/>
+            <WdgtComponent title="widget"/>
         </div>
     );
 }
