@@ -5,9 +5,7 @@ import { StrictMode } from 'react';
 /* Root */
 export function App() {
     return (
-        <div>
             <WdgtComponent title="widget"/>
-        </div>
     );
 }
 

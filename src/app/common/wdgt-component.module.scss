@@ -1,5 +1,15 @@
-.wdgt_wrapper {
-  border: 2px solid grey;
-  border-radius: 5px;
-  padding: 10px;
+.wdgt {
+  &Container {
+    height: 100%;
+    display: flex;
+  }
+
+  &WizardWrapper {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
