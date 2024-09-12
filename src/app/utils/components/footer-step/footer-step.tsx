@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { useWizard } from 'react-use-wizard';
+import {Button} from "@nextui-org/button";
 
 const FooterStep: React.FC = () => {
   const {
@@ -16,18 +17,24 @@ const FooterStep: React.FC = () => {
   return (
     <>
       <div>
-        <button
+        <Button
+          color="primary"
+          radius="full"
+          className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
           onClick={() => previousStep()}
           disabled={isLoading || isFirstStep}
         >
           Previous
-        </button>
-        <button
+        </Button>
+        <Button
+          radius="full"
+          className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+          color="primary"
           onClick={() => nextStep()}
           disabled={isLoading || isLastStep}
         >
           Next
-        </button>
+        </Button>
       </div>
     </>
   );

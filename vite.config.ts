@@ -1,6 +1,7 @@
 /// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tailwindcss from "tailwindcss";
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
@@ -10,6 +11,12 @@ export default defineConfig({
     server: {
         port: 4200,
         host: 'localhost',
+    },
+
+    css: {
+        postcss: {
+            plugins: [tailwindcss()],
+        },
     },
 
     preview: {

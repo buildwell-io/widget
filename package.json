@@ -10,9 +10,12 @@
   },
   "private": true,
   "dependencies": {
+    "@nextui-org/button": "^2.0.37",
+    "@nextui-org/react": "^2.4.6",
+    "@nextui-org/system": "^2.2.5",
+    "@nextui-org/theme": "^2.2.9",
     "@swc/helpers": "~0.5.2",
-    "framer-motion": "^11.3.31",
-    "goober": "^2.0.35",
+    "framer-motion": "^11.5.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-use-wizard": "^2.3.0"
@@ -46,6 +49,7 @@
     "nx": "17.2.8",
     "prettier": "^2.6.2",
     "sass": "^1.55.0",
+    "tailwindcss": "^3.4.10",
     "typescript": "~5.2.2",
     "vite": "^5.0.0",
     "vitest": "~0.34.6"
